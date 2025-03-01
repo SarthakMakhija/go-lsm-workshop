@@ -2,7 +2,7 @@ package block
 
 import (
 	"encoding/binary"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 )
 
 // Iterator represents the block iterator.

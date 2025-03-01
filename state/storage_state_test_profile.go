@@ -3,9 +3,9 @@
 package state
 
 import (
-	"go-lsm/manifest"
-	"go-lsm/memory"
-	"go-lsm/table"
+	"go-lsm-workshop/manifest"
+	"go-lsm-workshop/memory"
+	"go-lsm-workshop/table"
 	"os"
 	"slices"
 	"time"

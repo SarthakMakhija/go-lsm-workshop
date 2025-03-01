@@ -1,6 +1,6 @@
 package state
 
-import "go-lsm/table"
+import "go-lsm-workshop/table"
 
 // StorageStateSnapshot represents a point-in-time state of StorageState.
 // It is obtained before compaction runs by the compaction goroutine.

@@ -1,12 +1,13 @@
 package memory
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/kv"
-	"go-lsm/log"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/log"
 	"os"
 	"path/filepath"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestMemtableWithWALWithASingleKey(t *testing.T) {

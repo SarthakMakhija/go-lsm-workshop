@@ -1,7 +1,7 @@
 package iterator
 
 import (
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 )
 
 // Iterator represents a common interface for all the iterators available in the system.

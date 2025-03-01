@@ -1,9 +1,10 @@
 package compact
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/state"
+	"go-lsm-workshop/state"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGenerateCompactionTaskForSimpleLayeredCompactionWithNoCompaction(t *testing.T) {

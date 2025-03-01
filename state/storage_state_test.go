@@ -2,9 +2,9 @@ package state
 
 import (
 	"errors"
-	"go-lsm/kv"
-	"go-lsm/table"
-	"go-lsm/test_utility"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/table"
+	"go-lsm-workshop/test_utility"
 	"os"
 	"path/filepath"
 	"testing"

@@ -1,12 +1,13 @@
 package txn
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/kv"
-	"go-lsm/state"
-	"go-lsm/table"
-	"go-lsm/test_utility"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/table"
+	"go-lsm-workshop/test_utility"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestReadonlyTransactionWithEmptyState(t *testing.T) {

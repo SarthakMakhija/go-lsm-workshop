@@ -2,7 +2,7 @@ package block
 
 import (
 	"fmt"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

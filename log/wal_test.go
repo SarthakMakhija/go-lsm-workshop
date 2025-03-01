@@ -2,7 +2,7 @@ package log
 
 import (
 	"errors"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 	"os"
 	"path/filepath"
 	"testing"

@@ -2,7 +2,7 @@ package iterator
 
 import (
 	"container/heap"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 )
 
 // An IndexedIteratorMinHeap is a min-heap of IndexedIterator.

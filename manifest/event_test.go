@@ -1,9 +1,10 @@
 package manifest
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/compact/meta"
+	"go-lsm-workshop/compact/meta"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewMemtableCreatedEventEncodeAndDecode(t *testing.T) {

@@ -2,9 +2,9 @@ package memory
 
 import (
 	"fmt"
-	"go-lsm/kv"
-	"go-lsm/log"
-	"go-lsm/memory/external"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/log"
+	"go-lsm-workshop/memory/external"
 )
 
 // Memtable is an in-memory data structure which holds versioned key kv.Key and kv.Value pairs.

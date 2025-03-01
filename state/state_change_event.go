@@ -1,9 +1,9 @@
 package state
 
 import (
-	"go-lsm/compact/meta"
-	"go-lsm/table"
-	"go-lsm/table/block"
+	"go-lsm-workshop/compact/meta"
+	"go-lsm-workshop/table"
+	"go-lsm-workshop/table/block"
 	"slices"
 )
 

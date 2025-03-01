@@ -1,8 +1,8 @@
 package table
 
 import (
-	"go-lsm/kv"
-	"go-lsm/test_utility"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/test_utility"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

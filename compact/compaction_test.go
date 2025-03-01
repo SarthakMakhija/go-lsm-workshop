@@ -1,14 +1,15 @@
 package compact
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/kv"
-	"go-lsm/state"
-	"go-lsm/table"
-	"go-lsm/test_utility"
-	"go-lsm/txn"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/table"
+	"go-lsm-workshop/test_utility"
+	"go-lsm-workshop/txn"
 	"testing"
 	"time"
+
+	"github.com/stretchr/testify/assert"
 )
 
 const level1 = 1

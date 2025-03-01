@@ -1,8 +1,8 @@
 package table
 
 import (
-	"go-lsm/kv"
-	"go-lsm/table/block"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/table/block"
 )
 
 // Iterator represents SSTable iterator.

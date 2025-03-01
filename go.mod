@@ -1,4 +1,4 @@
-module go-lsm
+module go-lsm-workshop
 
 go 1.24
 

@@ -1,8 +1,9 @@
 package bloom
 
 import (
+	"go-lsm-workshop/kv"
+
 	"github.com/bits-and-blooms/bitset"
-	"go-lsm/kv"
 )
 
 // FilterBuilder represents bloom filter builder.

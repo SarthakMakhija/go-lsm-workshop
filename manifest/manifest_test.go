@@ -1,7 +1,7 @@
 package manifest
 
 import (
-	"go-lsm/compact/meta"
+	"go-lsm-workshop/compact/meta"
 	"os"
 	"path/filepath"
 	"testing"

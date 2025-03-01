@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 	"encoding/gob"
-	"go-lsm/compact/meta"
+	"go-lsm-workshop/compact/meta"
 	"io"
 	"unsafe"
 )

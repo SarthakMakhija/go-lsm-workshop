@@ -1,9 +1,9 @@
 package txn
 
 import (
-	"go-lsm/future"
-	"go-lsm/kv"
-	"go-lsm/state"
+	"go-lsm-workshop/future"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
 	"sync"
 )
 

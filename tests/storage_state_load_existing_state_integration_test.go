@@ -1,11 +1,11 @@
 package tests
 
 import (
-	"go-lsm/compact"
-	"go-lsm/kv"
-	"go-lsm/state"
-	"go-lsm/test_utility"
-	"go-lsm/txn"
+	"go-lsm-workshop/compact"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/test_utility"
+	"go-lsm-workshop/txn"
 	"testing"
 	"time"
 

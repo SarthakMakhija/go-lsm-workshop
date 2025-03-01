@@ -1,12 +1,13 @@
 package state
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/compact/meta"
-	"go-lsm/kv"
-	"go-lsm/table"
-	"go-lsm/test_utility"
+	"go-lsm-workshop/compact/meta"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/table"
+	"go-lsm-workshop/test_utility"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 const (

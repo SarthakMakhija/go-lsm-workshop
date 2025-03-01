@@ -3,7 +3,7 @@ package block
 import (
 	"bytes"
 	"encoding/binary"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 )
 
 // Meta represents a block metadata including the starting (/first), ending (/last) key and the starting offset

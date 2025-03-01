@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"go-lsm/kv"
-	"go-lsm/table/block"
-	"go-lsm/table/bloom"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/table/block"
+	"go-lsm-workshop/table/bloom"
 	"path/filepath"
 )
 

@@ -1,7 +1,7 @@
 package external
 
 import (
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 	"sync/atomic"
 	"unsafe"
 )

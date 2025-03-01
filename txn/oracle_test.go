@@ -2,10 +2,11 @@ package txn
 
 import (
 	"context"
-	"github.com/stretchr/testify/assert"
-	"go-lsm/state"
-	"go-lsm/test_utility"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/test_utility"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGetsTheBeginTimestamp(t *testing.T) {

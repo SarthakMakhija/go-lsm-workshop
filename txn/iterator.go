@@ -1,8 +1,8 @@
 package txn
 
 import (
-	"go-lsm/iterator"
-	"go-lsm/kv"
+	"go-lsm-workshop/iterator"
+	"go-lsm-workshop/kv"
 )
 
 // Iterator represents a readwrite transaction iterator.

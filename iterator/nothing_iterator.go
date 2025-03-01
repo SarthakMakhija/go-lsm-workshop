@@ -2,7 +2,7 @@ package iterator
 
 import (
 	"errors"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 )
 
 // NothingIterator is a no-operation iterator.

@@ -1,9 +1,10 @@
 package block
 
 import (
-	"github.com/stretchr/testify/assert"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestBlockSeekWithSeekToTheFirstKey(t *testing.T) {

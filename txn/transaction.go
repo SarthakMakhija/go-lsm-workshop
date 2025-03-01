@@ -2,10 +2,10 @@ package txn
 
 import (
 	"errors"
-	"go-lsm/future"
-	"go-lsm/iterator"
-	"go-lsm/kv"
-	"go-lsm/state"
+	"go-lsm-workshop/future"
+	"go-lsm-workshop/iterator"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
 	"sync"
 )
 

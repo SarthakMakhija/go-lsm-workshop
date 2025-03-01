@@ -1,11 +1,12 @@
 package bloom
 
 import (
-	"github.com/bits-and-blooms/bitset"
-	"github.com/spaolacci/murmur3"
-	"go-lsm/kv"
+	"go-lsm-workshop/kv"
 	"math"
 	"unsafe"
+
+	"github.com/bits-and-blooms/bitset"
+	"github.com/spaolacci/murmur3"
 )
 
 const uin8Size = int(unsafe.Sizeof(uint8(0)))

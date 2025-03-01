@@ -1,11 +1,11 @@
 package tests
 
 import (
-	go_lsm "go-lsm"
-	"go-lsm/kv"
-	"go-lsm/state"
-	"go-lsm/test_utility"
-	"go-lsm/txn"
+	go_lsm_workshop "go-lsm-workshop"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/test_utility"
+	"go-lsm-workshop/txn"
 	"testing"
 	"time"
 
@@ -21,7 +21,7 @@ func TestReadWithEmptyDb(t *testing.T) {
 		FlushMemtableDuration: 1 * time.Millisecond,
 		SSTableSizeInBytes:    4096,
 	}
-	db, _ := go_lsm.Open(storageOptions)
+	db, _ := go_lsm_workshop.Open(storageOptions)
 	defer func() {
 		db.Close()
 		test_utility.CleanupDirectoryWithTestName(t)
@@ -43,7 +43,7 @@ func TestReadAnExistingKeyValue(t *testing.T) {
 		FlushMemtableDuration: 1 * time.Millisecond,
 		SSTableSizeInBytes:    4096,
 	}
-	db, _ := go_lsm.Open(storageOptions)
+	db, _ := go_lsm_workshop.Open(storageOptions)
 	defer func() {
 		db.Close()
 		test_utility.CleanupDirectoryWithTestName(t)
@@ -79,7 +79,7 @@ func TestScanKeyValues1(t *testing.T) {
 		FlushMemtableDuration: 1 * time.Millisecond,
 		SSTableSizeInBytes:    4096,
 	}
-	db, _ := go_lsm.Open(storageOptions)
+	db, _ := go_lsm_workshop.Open(storageOptions)
 	defer func() {
 		db.Close()
 		test_utility.CleanupDirectoryWithTestName(t)
@@ -122,7 +122,7 @@ func TestScanKeyValues2(t *testing.T) {
 		FlushMemtableDuration: 1 * time.Millisecond,
 		SSTableSizeInBytes:    4096,
 	}
-	db, _ := go_lsm.Open(storageOptions)
+	db, _ := go_lsm_workshop.Open(storageOptions)
 	defer func() {
 		db.Close()
 		test_utility.CleanupDirectoryWithTestName(t)
@@ -141,7 +141,7 @@ func TestScanKeyValues2(t *testing.T) {
 	keyValues, err := db.Scan(kv.NewInclusiveKeyRange(kv.RawKey("storage"), kv.RawKey("wisckey")))
 
 	assert.NoError(t, err)
-	assert.Equal(t, []go_lsm.KeyValue{
+	assert.Equal(t, []go_lsm_workshop.KeyValue{
 		{Key: kv.RawKey("vsr"), Value: []byte("consensus algorithm")},
 		{Key: kv.RawKey("wisckey"), Value: []byte("modified LSM")},
 	}, keyValues)
@@ -156,7 +156,7 @@ func TestScanAndValidateReferencesOfSSTables(t *testing.T) {
 		FlushMemtableDuration: 1 * time.Millisecond,
 		SSTableSizeInBytes:    4096,
 	}
-	db, _ := go_lsm.Open(storageOptions)
+	db, _ := go_lsm_workshop.Open(storageOptions)
 	defer func() {
 		db.Close()
 		test_utility.CleanupDirectoryWithTestName(t)
@@ -182,7 +182,7 @@ func TestScanAndValidateReferencesOfSSTables(t *testing.T) {
 	keyValues, err := db.Scan(kv.NewInclusiveKeyRange(kv.RawKey("raft"), kv.RawKey("wisckey")))
 
 	assert.NoError(t, err)
-	assert.Equal(t, []go_lsm.KeyValue{
+	assert.Equal(t, []go_lsm_workshop.KeyValue{
 		{Key: kv.RawKey("raft"), Value: []byte("consensus algorithm")},
 		{Key: kv.RawKey("storage"), Value: []byte("Flash SSD")},
 	}, keyValues)
@@ -212,7 +212,7 @@ func TestGetAfterCompaction(t *testing.T) {
 			Duration: 10 * time.Millisecond,
 		},
 	}
-	db, _ := go_lsm.Open(storageOptions)
+	db, _ := go_lsm_workshop.Open(storageOptions)
 	defer func() {
 		db.Close()
 		test_utility.CleanupDirectoryWithTestName(t)

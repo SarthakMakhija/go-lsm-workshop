@@ -1,12 +1,12 @@
 package compact
 
 import (
-	"go-lsm/compact/meta"
-	"go-lsm/iterator"
-	"go-lsm/kv"
-	"go-lsm/state"
-	"go-lsm/table"
-	"go-lsm/txn"
+	"go-lsm-workshop/compact/meta"
+	"go-lsm-workshop/iterator"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/table"
+	"go-lsm-workshop/txn"
 )
 
 // Compaction represents core logic to compact table.SSTable files.

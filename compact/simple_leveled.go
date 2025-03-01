@@ -1,8 +1,8 @@
 package compact
 
 import (
-	"go-lsm/compact/meta"
-	"go-lsm/state"
+	"go-lsm-workshop/compact/meta"
+	"go-lsm-workshop/state"
 )
 
 // SimpleLeveledCompaction represents a leveled compaction strategy which compacts all the table.SSTable files between two levels.

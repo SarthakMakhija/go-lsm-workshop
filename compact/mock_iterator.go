@@ -1,6 +1,6 @@
 package compact
 
-import "go-lsm/kv"
+import "go-lsm-workshop/kv"
 
 type mockIterator struct {
 	keys         []kv.Key

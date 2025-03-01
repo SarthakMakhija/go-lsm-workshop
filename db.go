@@ -1,13 +1,13 @@
-package go_lsm
+package go_lsm_workshop
 
 import (
 	"errors"
 	"fmt"
-	"go-lsm/compact"
-	"go-lsm/future"
-	"go-lsm/kv"
-	"go-lsm/state"
-	"go-lsm/txn"
+	"go-lsm-workshop/compact"
+	"go-lsm-workshop/future"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/state"
+	"go-lsm-workshop/txn"
 	"log/slog"
 	"sync/atomic"
 	"time"

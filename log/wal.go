@@ -3,8 +3,8 @@ package log
 import (
 	"encoding/binary"
 	"fmt"
-	"go-lsm/kv"
-	"go-lsm/table/block"
+	"go-lsm-workshop/kv"
+	"go-lsm-workshop/table/block"
 	"io"
 	"log"
 	"os"
