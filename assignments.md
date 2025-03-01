@@ -42,3 +42,24 @@
     value := bytes[uint16(block.ReservedKeySize)+keySize+uint16(block.ReservedValueSize) : uint16(block.ReservedKeySize)+keySize+uint16(block.ReservedValueSize)+valueSize]
 ```
 
+#### Bloom filter Assignments
+
+1. Assignment 1
+
+```go
+for index := 0; index < len(positions); index++ {
+    position := positions[index]
+    filter.bitVector.Set(uint(position))
+}
+```
+
+2. Assignment 2
+
+```go
+for index := 0; index < len(positions); index++ {
+    position := positions[index]
+    if !filter.bitVector.Test(uint(position)) {
+        return false
+    }
+}
+```

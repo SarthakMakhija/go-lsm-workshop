@@ -57,10 +57,10 @@ func (filter Filter) Encode() ([]byte, error) {
 // add adds the given key in the bloom filter by setting the positions (/indices) of the key in the bit vector.
 func (filter Filter) add(key kv.Key) {
 	positions := filter.bitPositionsFor(key)
-	for index := 0; index < len(positions); index++ {
-		position := positions[index]
-		filter.bitVector.Set(uint(position))
-	}
+
+	//Assignment 1
+	//Step1: Iterate over all the positions
+	//Step2: Set the bit in the bit vector at the position
 }
 
 // MayContain returns true if all the bits identified by the positions (/indices) for the key are add.
@@ -69,12 +69,11 @@ func (filter Filter) add(key kv.Key) {
 // False indicates that the key is definitely NOT present in the system.
 func (filter Filter) MayContain(key kv.Key) bool {
 	positions := filter.bitPositionsFor(key)
-	for index := 0; index < len(positions); index++ {
-		position := positions[index]
-		if !filter.bitVector.Test(uint(position)) {
-			return false
-		}
-	}
+
+	//Assignment 2
+	//Step1: Iterate over all the positions
+	//Step2: Return early if any of the bits in the bit vector at the identified positions are not set.
+
 	return true
 }
 
