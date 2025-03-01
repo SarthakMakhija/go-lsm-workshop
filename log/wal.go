@@ -48,7 +48,7 @@ func Recover(path string, callback func(key kv.Key, value kv.Value)) (*WAL, erro
 	}
 	for len(bytes) > 0 {
 
-		//Assignment 2:
+		//Assignment 2
 		//Step1: Decode key and value
 
 		callback(kv.DecodeFrom(key), kv.NewValue(value))
@@ -68,7 +68,7 @@ func Recover(path string, callback func(key kv.Key, value kv.Value)) (*WAL, erro
 func (wal *WAL) Append(key kv.Key, value kv.Value) error {
 	buffer := make([]byte, key.EncodedSizeInBytes()+value.SizeInBytes()+block.ReservedKeySize+block.ReservedValueSize)
 
-	//Assignment 1:
+	//Assignment 1
 	//Step1: Encode key and value
 	//Step2: Write encoded data to the WAL file.
 

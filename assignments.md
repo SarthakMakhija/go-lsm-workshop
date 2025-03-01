@@ -1,3 +1,23 @@
+#### Memtable Assignments
+
+1. Assignment 1
+
+```go
+    memtable.entries.Put(key, value)
+```
+
+2. Assignment 2
+
+```go
+    memtable.Set(key, kv.EmptyValue)
+```
+
+3. Assignment 3
+
+```go
+    memtable.entries.Put(key, value)
+```
+
 #### WAL Assignments
 
 1. Assignment 1
@@ -8,16 +28,17 @@
 
 	binary.LittleEndian.PutUint16(buffer[block.ReservedKeySize+key.EncodedSizeInBytes():], uint16(value.SizeInBytes()))
 	copy(buffer[block.ReservedKeySize+key.EncodedSizeInBytes()+block.ReservedValueSize:], value.Bytes())
-    
+
     _, err := wal.file.Write(buffer)
 ```
 
 2. Assignment 2
 
 ```go
-		keySize := binary.LittleEndian.Uint16(bytes)
-		key := bytes[block.ReservedKeySize : uint16(block.ReservedKeySize)+keySize]
+    keySize := binary.LittleEndian.Uint16(bytes)
+    key := bytes[block.ReservedKeySize : uint16(block.ReservedKeySize)+keySize]
 
-		valueSize := binary.LittleEndian.Uint16(bytes[uint16(block.ReservedKeySize)+keySize:])
-		value := bytes[uint16(block.ReservedKeySize)+keySize+uint16(block.ReservedValueSize) : uint16(block.ReservedKeySize)+keySize+uint16(block.ReservedValueSize)+valueSize]
+    valueSize := binary.LittleEndian.Uint16(bytes[uint16(block.ReservedKeySize)+keySize:])
+    value := bytes[uint16(block.ReservedKeySize)+keySize+uint16(block.ReservedValueSize) : uint16(block.ReservedKeySize)+keySize+uint16(block.ReservedValueSize)+valueSize]
 ```
+

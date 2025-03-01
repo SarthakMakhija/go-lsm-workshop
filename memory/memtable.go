@@ -61,7 +61,9 @@ func RecoverFromWAL(id uint64, memTableSizeInBytes int64, walDirectoryPath strin
 	}
 	var maxTimestamp uint64
 	wal, err := log.Recover(log.CreateWalPathFor(id, walDirectoryPath), func(key kv.Key, value kv.Value) {
-		memtable.entries.Put(key, value)
+		//Assignment 3
+		//Step1: Apply the key-value pair to the skiplist
+
 		maxTimestamp = max(maxTimestamp, key.Timestamp())
 	})
 	if err != nil {
@@ -91,7 +93,9 @@ func (memtable *Memtable) Set(key kv.Key, value kv.Value) error {
 			return err
 		}
 	}
-	memtable.entries.Put(key, value)
+
+	//Assignment 1
+	//Step1: Add the key value pair to the skiplist
 	return nil
 }
 
@@ -99,7 +103,11 @@ func (memtable *Memtable) Set(key kv.Key, value kv.Value) error {
 // 1) Appending the key/value pair in the WAL, if WAL is present.
 // 2) Writing the key/value pair in the Skiplist.
 func (memtable *Memtable) Delete(key kv.Key) error {
-	return memtable.Set(key, kv.EmptyValue)
+
+	//Assignment 2
+	//Step1: Add the deleted key to Skiplist
+
+	return nil
 }
 
 // Scan scans over the Memtable with the given inclusiveRange.
