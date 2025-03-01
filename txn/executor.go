@@ -41,12 +41,16 @@ func (executor *Executor) start() {
 	for {
 		select {
 		case executionRequest := <-executor.incomingChannel:
-			err := executor.state.Set(executionRequest.batch)
-			executionRequest.callback()
+			//Assignment 6:
+			//Step1: Apply the batch the state.
+			err :=
+				executionRequest.callback()
 			if err != nil {
-				executionRequest.future.MarkDoneAsError(err)
+				//Step2: Complete the future with error.
+
 			} else {
-				executionRequest.future.MarkDoneAsOk()
+				//Step3: Complete the future with success.
+
 			}
 		case <-executor.stopChannel:
 			close(executor.incomingChannel)

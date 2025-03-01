@@ -63,3 +63,52 @@ for index := 0; index < len(positions); index++ {
     }
 }
 ```
+
+#### Transactions
+
+1. Assignment 1
+
+```go
+    beginTimestamp := oracle.nextTimestamp - 1
+```
+
+2. Assignment 2
+
+```go
+    commitTimestamp := oracle.nextTimestamp
+```
+
+3. Assignment 3
+
+```go
+    for _, committedTransaction := range oracle.readyToCommitTransactions {
+		if committedTransaction.commitTimestamp <= transaction.beginTimestamp {
+			continue
+		}
+		for _, key := range transaction.reads {
+			if committedTransaction.transaction.batch.Contains(key) {
+				return true
+			}
+		}
+	}
+```
+
+4. Assignment 4:
+
+```go
+    transaction.trackReads(key)
+```
+
+5. Assignment 5:
+
+```go
+    transaction.oracle.executor.submit(kv.NewTimestampedBatchFrom(*transaction.batch, commitTimestamp)
+```
+
+6. Assignment 6:
+
+```go
+    executor.state.Set(executionRequest.batch)
+    executionRequest.future.MarkDoneAsError(err)
+    executionRequest.future.MarkDoneAsOk()
+```

@@ -82,7 +82,10 @@ func (oracle *Oracle) MaxBeginTimestamp() uint64 {
 // This wait is to ensure that all the commits till begin-timestamp are applied in the storage.
 func (oracle *Oracle) beginTimestamp() uint64 {
 	oracle.lock.Lock()
-	beginTimestamp := oracle.nextTimestamp - 1
+
+	//Assignment 1
+	//Step1: Get the begin timestamp. (Important): it cannot be same as the nextTimestamp).
+
 	oracle.beginTimestampMark.Begin(beginTimestamp)
 	oracle.lock.Unlock()
 
@@ -112,7 +115,10 @@ func (oracle *Oracle) mayBeCommitTimestampFor(transaction *Transaction) (uint64,
 	oracle.FinishBeginTimestamp(transaction)
 	oracle.cleanupReadyToCommitTransactions()
 
-	commitTimestamp := oracle.nextTimestamp
+	//Assignment 2
+	//Step1: Get the begin timestamp. (Important): it cannot be same as the nextTimestamp).
+
+	commitTimestamp := 
 	oracle.nextTimestamp = oracle.nextTimestamp + 1
 
 	oracle.trackReadyToCommitTransaction(transaction, commitTimestamp)
@@ -125,16 +131,11 @@ func (oracle *Oracle) mayBeCommitTimestampFor(transaction *Transaction) (uint64,
 // the keys read by the transaction Tx are modified by another transaction that has the commitTimestamp > beginTimestampOf(Tx).
 // ReadWriteTransaction tracks its read keys in the `reads` property.
 func (oracle *Oracle) hasConflictFor(transaction *Transaction) bool {
-	for _, committedTransaction := range oracle.readyToCommitTransactions {
-		if committedTransaction.commitTimestamp <= transaction.beginTimestamp {
-			continue
-		}
-		for _, key := range transaction.reads {
-			if committedTransaction.transaction.batch.Contains(key) {
-				return true
-			}
-		}
-	}
+	
+	//Assignment 3
+	//Step 1: Determine conflict
+	//Hint: The incoming transaction (I) will conflict with any other readyToCommitTransaction (T), if 
+	//T has modified any of the keys read by I with a commit-timestamp > I's begin-timestamp.
 	return false
 }
 

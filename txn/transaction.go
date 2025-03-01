@@ -80,7 +80,10 @@ func (transaction *Transaction) Get(key []byte) (kv.Value, bool) {
 	if transaction.readonly {
 		return transaction.state.Get(versionedKey)
 	}
-	transaction.trackReads(key)
+	
+	//Assignment 4:
+	//Step1: Track the keys read by the transaction.
+
 	if value, ok := transaction.batch.Get(key); ok {
 		return value, true
 	}
@@ -159,7 +162,10 @@ func (transaction *Transaction) Commit() (*future.Future, error) {
 	commitCallback := func() {
 		transaction.oracle.commitTimestampMark.Finish(commitTimestamp)
 	}
-	return transaction.oracle.executor.submit(kv.NewTimestampedBatchFrom(*transaction.batch, commitTimestamp), commitCallback), nil
+
+	//Assignment 5:
+	//Step1: Send the transaction to be applied serially.
+	return , commitCallback), nil
 }
 
 // trackReads keeps a track of all the keys read in the Readwrite transaction.
