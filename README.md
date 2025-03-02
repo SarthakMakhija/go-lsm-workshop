@@ -16,3 +16,10 @@ This hands-on experience will equip participants with the practical skills and t
 ### Workshop Content
 
 <img width="636" alt="Workshop content" src="https://github.com/user-attachments/assets/4d0c55de-28c0-42e1-b419-ef20b56cfb6d" />
+
+### Prerequisites for attending
+
+To get the most out of this hands-on workshop, participants should come prepared with:
+
+- **Practical Golang experience**: You should be comfortable writing and running Go code.
+- **Go 1.24 installation**: Please ensure you have Go version 1.24 installed on your machine before the workshop begins.
