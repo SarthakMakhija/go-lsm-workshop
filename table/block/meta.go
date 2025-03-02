@@ -90,20 +90,16 @@ func (metaList *MetaList) Length() int {
 // It compares the key with the StartingKey of the block meta.
 // It returns the instance of Meta where the given key is greater than or equal to the starting key.
 func (metaList *MetaList) MaybeBlockMetaContaining(key kv.Key) (Meta, int) {
+
+	//Assignment 3
+	//Step1: Perform binary search on the MetaList and return the return the instance of Meta
+	//where the given key is greater than or equal to the starting key.
+	//Hint: Use CompareKeysWithDescendingTimestamp for key comparison.
+
 	low, high := 0, metaList.Length()-1
 	possibleIndex := low
 	for low <= high {
-		mid := low + (high-low)/2
-		meta := metaList.list[mid]
-		switch key.CompareKeysWithDescendingTimestamp(meta.StartingKey) {
-		case -1:
-			high = mid - 1
-		case 0:
-			return meta, mid
-		case 1:
-			possibleIndex = mid
-			low = mid + 1
-		}
+
 	}
 	return metaList.list[possibleIndex], possibleIndex
 }

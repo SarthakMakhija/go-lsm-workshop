@@ -129,7 +129,12 @@ func (table *SSTable) SeekToFirst() (*Iterator, error) {
 // 3) Seek to the key within the read block (seeks to the offset where the key >= the given key)
 // 4) Handle the case where block.Iterator may become invalid.
 func (table *SSTable) SeekToKey(key kv.Key) (*Iterator, error) {
-	_, blockIndex := table.blockMetaList.MaybeBlockMetaContaining(key)
+	//Assignment 2
+	//Step1: Locate the block which may contain the desired key
+	
+	_, blockIndex := 
+
+
 	readBlock, err := table.readBlock(blockIndex)
 	if err != nil {
 		return nil, err
@@ -207,7 +212,11 @@ func DecrementReferenceFor(tables []*SSTable) {
 func (table *SSTable) readBlock(blockIndex int) (block.Block, error) {
 	startingOffset, endOffset := table.offsetRangeOfBlockAt(blockIndex)
 	buffer := make([]byte, endOffset-startingOffset)
-	n, err := table.file.Read(int64(startingOffset), buffer)
+
+	//Assignment 1
+	//Step1: Read the buffer (which represents the block) from disk.
+
+	n, err := 
 	if err != nil {
 		return block.Block{}, err
 	}

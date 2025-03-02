@@ -49,9 +49,10 @@ func (builder *SSTableBuilder) Add(key kv.Key, value kv.Value) {
 	}
 	builder.endingKey = key
 	builder.bloomFilterBuilder.Add(key)
-	if builder.blockBuilder.Add(key, value) {
-		return
-	}
+
+	//Assignment 1
+	//Step1: Add the key-value pair to the block builder.
+
 	builder.finishBlock()
 	builder.startNewBlockBuilder(key)
 	builder.blockBuilder.Add(key, value)
@@ -81,9 +82,12 @@ func (builder *SSTableBuilder) Build(id uint64, rootPath string) (*SSTable, erro
 
 	builder.finishBlock()
 	buffer := new(bytes.Buffer)
-	buffer.Write(builder.allBlocksData)          //data blocks
-	buffer.Write(builder.blockMetaList.Encode()) //metadata section block.MetaList.Encode()
-	buffer.Write(blockMetaStartingOffset())      //4 bytes to indicate where the meta section starts from
+
+	//Assignment 3
+	//Step1: Write allBlocksData in the buffer
+	//Step2: Write block meta-list
+	//Step3: Write the starting offset of the block meta-section
+
 	filter := builder.bloomFilterBuilder.Build(bloom.FalsePositiveRate)
 	encodedFilter, err := filter.Encode()
 	if err != nil {
@@ -91,8 +95,9 @@ func (builder *SSTableBuilder) Build(id uint64, rootPath string) (*SSTable, erro
 	}
 
 	bloomFilterStartingOffset := bloomStartingOffset(buffer)
-	buffer.Write(encodedFilter)             //bloom filter section bloom.Filter.Encode()
-	buffer.Write(bloomFilterStartingOffset) //4 bytes to indicate where the bloom filter section starts from
+
+	//Step4: Write the bloom filter
+	//Step5: Write the starting offset of the bloom filter
 
 	file, err := CreateAndWrite(SSTableFilePath(id, rootPath), buffer.Bytes())
 	if err != nil {
@@ -123,13 +128,10 @@ func (builder SSTableBuilder) EstimatedSize() int {
 // 2) Storing the block.Meta in the block meta-list.
 // 3) Collecting the encoded data of the current block in allBlocksData.
 func (builder *SSTableBuilder) finishBlock() {
-	encodedBlock := builder.blockBuilder.Build().Encode()
-	builder.blockMetaList.Add(block.Meta{
-		BlockStartingOffset: uint32(len(builder.allBlocksData)),
-		StartingKey:         builder.startingKey,
-		EndingKey:           builder.endingKey,
-	})
-	builder.allBlocksData = append(builder.allBlocksData, encodedBlock...)
+	//Assignment 2
+	//Step1: Encode the block using blockBuilder.
+	//Step2: Store the block.Meta in the block meta-list.
+	//Step3: Collect the encoded data of the current block in allBlocksData.
 }
 
 // startNewBlockBuilder creates a new instance of SSTableBuilder.

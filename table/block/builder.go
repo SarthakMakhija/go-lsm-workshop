@@ -1,7 +1,6 @@
 package block
 
 import (
-	"encoding/binary"
 	"go-lsm-workshop/kv"
 	"unsafe"
 )
@@ -58,11 +57,9 @@ func (builder *Builder) Add(key kv.Key, value kv.Value) bool {
 	builder.keyValueBeginOffsets = append(builder.keyValueBeginOffsets, uint16(builder.latestDataIndex))
 	keyValueBuffer := make([]byte, ReservedKeySize+ReservedValueSize+key.EncodedSizeInBytes()+value.SizeInBytes())
 
-	binary.LittleEndian.PutUint16(keyValueBuffer[:], uint16(key.EncodedSizeInBytes()))
-	copy(keyValueBuffer[ReservedKeySize:], key.EncodedBytes())
-
-	binary.LittleEndian.PutUint16(keyValueBuffer[ReservedKeySize+key.EncodedSizeInBytes():], uint16(value.SizeInBytes()))
-	copy(keyValueBuffer[ReservedKeySize+key.EncodedSizeInBytes()+ReservedValueSize:], value.Bytes())
+	//Assignment 1
+	//Step1: Encode key and write it to the keyValueBuffer
+	//Step2: Encode value and write it to the keyValueBuffer
 
 	n := copy(builder.data[builder.latestDataIndex:], keyValueBuffer)
 	builder.latestDataIndex += n
