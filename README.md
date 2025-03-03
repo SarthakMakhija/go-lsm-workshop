@@ -2,6 +2,8 @@
 
 Workshop on **Internals of key-value storage engines: LSM-trees and beyond** based on the [go-lsm](https://github.com/SarthakMakhija/go-lsm) repository.
 
+_This code neither compiles, nor runs. The code will run after all the assignments are done._
+
 ### About the workshop
 
 This workshop offers a deep dive into the practical aspects of building a an embedded key-value storage engine using the Log-Structured Merge-tree (LSM-tree) architecture. 
