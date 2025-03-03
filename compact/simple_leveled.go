@@ -49,7 +49,10 @@ func (compaction SimpleLeveledCompaction) CompactionDescription(stateSnapshot st
 			}
 		}
 		lowerLevel := level + 1
-		countRatioPercentage := (float64(ssTableCountByLevel[lowerLevel]) / float64(ssTableCountByLevel[level])) * 100
+
+		//Assignment 1
+		//Step1: Compute the ratio as percentage.
+		countRatioPercentage := 
 		if countRatioPercentage < float64(compaction.options.NumberOfSSTablesRatioPercentage) {
 			println("Triggering simple leveled compaction between levels ", level, lowerLevel)
 			var upperLevel int

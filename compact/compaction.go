@@ -65,7 +65,10 @@ func (compaction *Compaction) compact(description meta.SimpleLeveledCompactionDe
 	}
 
 	iterators := append(upperLevelSSTableIterator, lowerLevelSSTableIterator...)
-	return compaction.ssTablesFromIterator(iterator.NewMergeIterator(iterators, iterator.NoOperationOnCloseCallback))
+
+	//Assignment 2
+	//Step1: Create an iterator.
+	return
 }
 
 // ssTablesFromIterator creates a slice of table.SSTable (/new SSTables) from the given iterator.
@@ -97,12 +100,8 @@ func (compaction *Compaction) ssTablesFromIterator(iterator iterator.Iterator) (
 			continue
 		}
 		if iterator.Key().Timestamp() <= maxBeginTimestamp {
-			if sameAsLastRawKey && !firstKeyOccurrence {
-				if err := iterator.Next(); err != nil {
-					return nil, err
-				}
-				continue
-			}
+			//Assignment 3
+			//Step 1: Skip the key
 			firstKeyOccurrence = false
 		}
 		if int64(ssTableBuilder.EstimatedSize()) >= compaction.options.SSTableSizeInBytes && !sameAsLastRawKey {

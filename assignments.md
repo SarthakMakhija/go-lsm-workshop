@@ -190,3 +190,25 @@ for index := 0; index < len(positions); index++ {
 
 #### Compaction
 
+1. Assignment 1:
+
+```go
+    (float64(ssTableCountByLevel[lowerLevel]) / float64(ssTableCountByLevel[level])) * 100
+```
+
+2. Assignment 2:
+
+```go
+    compaction.ssTablesFromIterator(iterator.NewMergeIterator(iterators, iterator.NoOperationOnCloseCallback))
+```
+
+3. Assignment 3:
+
+```go
+    if sameAsLastRawKey && !firstKeyOccurrence {
+        if err := iterator.Next(); err != nil {
+            return nil, err
+        }
+        continue
+    }
+```
