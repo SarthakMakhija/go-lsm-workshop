@@ -44,6 +44,7 @@ However, there are a few things that I would like to work upon:
 
 | Date                 | PDF Link                                                                                                                                                                                |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 06th-07th March 2025 | [Internals of key-value storage engines: LSM-trees and beyond.pdf](https://github.com/user-attachments/files/19141831/Internals.of.key-value.storage.engines_.LSM-trees.and.beyond.pdf) |
+| 06th-07th March 2025 | [Internals of key-value storage engines_ LSM-trees and beyond.pdf](https://github.com/user-attachments/files/19144531/Internals.of.key-value.storage.engines_.LSM-trees.and.beyond.pdf) |
+
 
 
