@@ -25,3 +25,11 @@ To get the most out of this hands-on workshop, participants should come prepared
 
 - **Practical Golang experience**: You should be comfortable writing and running Go code.
 - **Go 1.24 installation**: Please ensure you have Go version 1.24 installed on your machine before the workshop begins.
+
+### Workshop content
+
+| Date                 | PDF Link                                                                                                                                                                                |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 06th-07th March 2025 | [Internals of key-value storage engines_ LSM-trees and beyond.pdf](https://github.com/user-attachments/files/19141831/Internals.of.key-value.storage.engines_.LSM-trees.and.beyond.pdf) |
+
+
