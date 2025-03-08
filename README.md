@@ -31,7 +31,7 @@ To get the most out of this hands-on workshop, participants should come prepared
 **06th-07th March 2025**
 
 The workshop was well-received, with participants providing positive feedback regarding the content delivery and the overall flow of information.
-I was satisfied with the overall timing, the content delivery and the way the workshop content has shaped up and story building leading to a concept. 
+I was pleased with the workshop's pacing, the quality of the content, the organization of the material, and the effective storytelling leading to the explanation of each concept.
 
 However, there are a few things that I would like to work upon:
 
