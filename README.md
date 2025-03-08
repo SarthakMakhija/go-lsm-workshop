@@ -28,7 +28,7 @@ To get the most out of this hands-on workshop, participants should come prepared
 
 ### Reflections
 
-**06th-07th March 2025**
+**06th-07th March 2025, (Caizin office, Pune)**
 
 The workshop was well-received, with participants providing positive feedback regarding the content delivery and the overall flow of information.
 I was pleased with the workshop's pacing, the quality of the content, the organization of the material, and the effective storytelling leading to the explanation of each concept.
