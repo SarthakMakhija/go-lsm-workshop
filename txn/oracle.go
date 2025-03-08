@@ -116,7 +116,7 @@ func (oracle *Oracle) mayBeCommitTimestampFor(transaction *Transaction) (uint64,
 	oracle.cleanupReadyToCommitTransactions()
 
 	//Assignment 2
-	//Step1: Get the begin timestamp. (Important): it cannot be same as the nextTimestamp).
+	//Step1: Get the commit timestamp.
 
 	commitTimestamp := 
 	oracle.nextTimestamp = oracle.nextTimestamp + 1

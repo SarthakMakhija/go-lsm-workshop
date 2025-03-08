@@ -165,7 +165,7 @@ func (transaction *Transaction) Commit() (*future.Future, error) {
 
 	//Assignment 5:
 	//Step1: Send the transaction to be applied serially.
-	return , commitCallback), nil
+	return , nil
 }
 
 // trackReads keeps a track of all the keys read in the Readwrite transaction.
