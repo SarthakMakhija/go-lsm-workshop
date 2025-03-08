@@ -26,10 +26,23 @@ To get the most out of this hands-on workshop, participants should come prepared
 - **Practical Golang experience**: You should be comfortable writing and running Go code.
 - **Go 1.24 installation**: Please ensure you have Go version 1.24 installed on your machine before the workshop begins.
 
+### Reflections
+
+**06th-07th March 2025**
+
+The workshop was well-received, with participants providing positive feedback regarding the content delivery and the overall flow of information.
+I was satisfied with the overall timing, the content delivery and the way the workshop content has shaped up and story building leading to a concept. 
+
+However, there are a few things that I would like to work upon:
+
+1. The "Transactions" section felt somewhat rushed. To address this, the Day 2 schedule will need restructuring to dedicate a full 90 minutes to the "Transactions" topic, ensuring adequate time for exploration and practice.
+2. The current assignment structure includes some relatively simple tasks that could be eliminated. This adjustment will allow for the inclusion of more assignments focused on "SSTable" and "Transactions".
+3. A dedicated 15-minute segment will be added to the workshop to provide a clear and concise overview of how all the components of the Log-Structured Merge-tree (LSM) work together in [go-lsm](https://github.com/SarthakMakhija/go-lsm).
+
 ### Workshop content
 
 | Date                 | PDF Link                                                                                                                                                                                |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 06th-07th March 2025 | [Internals of key-value storage engines_ LSM-trees and beyond.pdf](https://github.com/user-attachments/files/19141831/Internals.of.key-value.storage.engines_.LSM-trees.and.beyond.pdf) |
+| 06th-07th March 2025 | [Internals of key-value storage engines: LSM-trees and beyond.pdf](https://github.com/user-attachments/files/19141831/Internals.of.key-value.storage.engines_.LSM-trees.and.beyond.pdf) |
 
 
