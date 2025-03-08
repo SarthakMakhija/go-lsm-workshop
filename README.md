@@ -2,7 +2,7 @@
 
 Workshop on **Internals of key-value storage engines: LSM-trees and beyond** based on the [go-lsm](https://github.com/SarthakMakhija/go-lsm) repository.
 
-_This code neither compiles, nor runs. The code will run after all the assignments are done._
+_This code neither compiles, nor runs :). The code will compile after all the assignments are done._
 
 ### About the workshop
 
