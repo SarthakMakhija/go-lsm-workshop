@@ -35,9 +35,10 @@ I was pleased with the workshop's pacing, the quality of the content, the organi
 
 However, there are a few things that I would like to work upon:
 
-1. The "Transactions" section felt somewhat rushed. To address this, the Day 2 schedule will need restructuring to dedicate a full 90 minutes to the "Transactions" topic, ensuring adequate time for exploration and practice.
-2. The current assignment structure includes some relatively simple tasks that could be eliminated. This adjustment will allow for the inclusion of more assignments focused on "SSTable" and "Transactions".
-3. A dedicated 15-minute segment will be added to the workshop to provide a clear and concise overview of how all the components of the Log-Structured Merge-tree (LSM) work together in [go-lsm](https://github.com/SarthakMakhija/go-lsm).
+1. My colleagues [Vrushali Singh](https://www.linkedin.com/in/vrushalisingh/) and [Sneha Bendre](https://www.linkedin.com/in/sneha-bendre-0b6454212/) introduced a QA section using [Mentimeter](https://www.mentimeter.com/) on Day 2. It was a wonderful addition, and I believe a similar Q&A section would be beneficial for Day 1 as well.
+2. The "Transactions" section felt somewhat rushed. To address this, the Day 2 schedule will need restructuring to dedicate a full 90 minutes to the "Transactions" topic, ensuring adequate time for exploration and practice.
+3. The current assignment structure includes some relatively simple tasks that could be eliminated. This adjustment will allow for the inclusion of more assignments focused on "SSTable" and "Transactions".
+4. A dedicated 15-minute segment will be added to the workshop to provide a clear and concise overview of how all the components of the Log-Structured Merge-tree (LSM) work together in [go-lsm](https://github.com/SarthakMakhija/go-lsm).
 
 ### Workshop content
 
