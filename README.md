@@ -11,7 +11,7 @@ Participants will gain a comprehensive understanding of the fundamental concepts
 The workshop delves into the theoretical underpinnings of RUM conjecture and the LSM-tree itself, before transitioning into hands-on implementation. 
 
 Attendees will learn to build core components such as Memtables, Write-Ahead Logs (WAL), and SSTables enhanced with Bloom filters.  
-Finally, the workshop covers advanced topics like transaction management and compaction strategies, providing a complete roadmap for creating a robust and efficient storage engine. 
+Finally, the workshop covers advanced topics like [Transaction management with Serializable Snapshot Isolation](https://tech-lessons.in/en/blog/serializable_snapshot_isolation/) and Compaction, providing a complete roadmap for creating a robust and efficient storage engine. 
 
 This hands-on experience will equip participants with the practical skills and theoretical knowledge necessary to tackle real-world storage challenges.
 
